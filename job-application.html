@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(91, 96, 96);
+        }
+
+
+        .content {
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            height: 550px;
+            margin: 50px auto;
+            width: 600px;
+        }
+
+        .heading {
+            display: flex;
+            padding-top: 12px;
+            padding-left: 12px;
+        }
+
+        .heading h2 {
+            align-self: flex-end;
+            padding-left: 5px;
+        }
+
+        .heading h1 {
+            text-transform: capitalize;
+        }
+
+        .names {
+            display: flex;
+            flex-direction: column;
+            margin: 3px;
+
+
+        }
+
+        .names label {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px;
+            margin-top: 20px;
+            /* margin-left: auto;
+            margin-right: auto; */
+        }
+
+        /* .names input {
+            padding: 6px 15px;
+            margin-right: 15px;
+            width: 240px;
+        } */
+
+        input,
+        select,
+        textarea {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            border-color: red;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 9px;
+            margin-right: 9px;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: 1px solid red;
+            border-radius: 5px;
+            padding: 6px 10px;
+            font-size: 15px;
+            transition: 0.3s ease-in;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: bisque;
+            color: black;
+            border: transparent 2px;
+            transition: 0.3s ease-out;
+        }
+
+        .text-address {
+            grid-column: 1/span 2;
+        }
+
+        .text-address textarea {
+            width: 572px;
+            margin: 0px 2px;
+        }
+
+        @media (max-width:460px) {
+            .text-address {
+                grid-column: 1/span 1;
+            } 
+
+            .form-control {
+                grid-template-columns: auto;
+            }
+            .content{height:1200px;}
+            .names label {
+            font-size: 25px;
+            margin-bottom: 13px;
+        }
+        input,
+        select,
+        textarea {
+            padding: 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 24px;
+        }
+.text-address label{font-size: 25px;}
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+
+        <form>
+            <div class="heading">
+
+                <h1>job application</h1>
+                <h2>(web)</h2>
+            </div>
+
+            <div class="form-control">
+
+                <div class="names">
+                    <label for="first-name">first name</label>
+                    <input id="first-name" name="first-name" type="text" placeholder="enter first name">
+                </div>
+
+                <div class="names">
+                    <label for="last-name"> last name</label>
+                    <input id="last-name" type="text" placeholder="enter last name">
+                </div>
+
+
+
+                <div class="names">
+                    <label for="email"> email-id</label>
+                    <input id="email" type="email" placeholder="enter email....">
+                </div>
+
+                <div class="names">
+                    <label for="select"> job role</label>
+                    <select id="select" name="job-role">
+                        <option value="">select job role</option>
+                        <option value="front-end">front-end developer</option>
+                        <option value="backend">back-end developer</option>
+                        <option value="full-stck">full-stack developer</option>
+                        <option value="ux and ui">ux and ui designer</option>
+                    </select>
+                </div>
+
+
+
+                <div class="text-address">
+                    <label for="address">address</label>
+                    <textarea id="address" name="address" row="4" cols="30" placeholder="enter address here"></textarea>
+                </div>
+
+
+
+
+
+                <div class="names">
+                    <label for="city">city</label>
+                    <input id="city" name="city" type="city" placeholder="enter city name">
+                </div>
+
+                <div class="names">
+                    <label for="pincode"> pincode</label>
+                    <input type="number" id="pincode" name="pincode" placeholder="enter pincode name" />
+                </div>
+
+
+
+                <div class="names">
+                    <label for="date"></lable>date</label>
+                    <input id="date" name="date" type="date" value="2022-09-08">
+                </div>
+
+                <div class="names">
+                    <label for="upload"> upload your cv</label>
+                    <input id="upload" type="file" name="upload">
+                </div>
+
+
+
+            </div>
+        </form>
+        <div class="btn-container">
+            <button type="submit">apply now</button>
+        </div>
+    </div>
+</body>
+
+</html>
